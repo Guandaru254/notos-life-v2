@@ -1,8 +1,8 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import Link from "next/link";
+import FallbackImage from "../components/FallbackImage";
 
 export default function HomePage() {
   const heroImage = "/images/hero.jpg"; // ✅ from public/images folder
@@ -11,18 +11,12 @@ export default function HomePage() {
     <main className="bg-white text-gray-900">
       {/* ================= HERO SECTION ================= */}
       <section className="relative h-screen w-full overflow-hidden">
-        <Image
+        <FallbackImage
           src={heroImage}
           alt="Notos Life restaurant hero"
           fill
           priority
           className="object-cover"
-          onError={(e) => {
-            const target = e.target;
-            target.onerror = null;
-            target.src =
-              "https://placehold.co/1920x1080/000000/FFFFFF?text=Notos+Life";
-          }}
         />
 
         {/* Overlay content */}
@@ -78,7 +72,7 @@ export default function HomePage() {
         </p>
 
         <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8">
-          <Image
+          <FallbackImage
             src="/images/chef.jpg"
             alt="Chef preparing meal"
             width={400}
@@ -133,7 +127,7 @@ export default function HomePage() {
               whileHover={{ scale: 1.03 }}
               className="rounded-2xl overflow-hidden shadow-xl bg-gray-50 hover:shadow-2xl transition"
             >
-              <Image
+              <FallbackImage
                 src={item.image}
                 alt={item.name}
                 width={400}
@@ -175,14 +169,14 @@ export default function HomePage() {
         </p>
 
         <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <Image
+          <FallbackImage
             src="https://placehold.co/300x300/F5F5F5/4B5563?text=Olive+Oil"
             alt="Olive Oil"
             width={300}
             height={300}
             className="rounded-xl shadow-lg object-cover"
           />
-          <Image
+          <FallbackImage
             src="https://placehold.co/300x300/F5F5F5/4B5563?text=Linen+Apron"
             alt="Apron"
             width={300}

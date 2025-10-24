@@ -1,7 +1,7 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
+import FallbackImage from "../../components/FallbackImage";
 
 const products = [
   {
@@ -52,17 +52,12 @@ export default function ShopPage() {
         transition={{ duration: 1 }}
         className="relative w-full h-[500px] mb-24 overflow-hidden"
       >
-        <Image
+        <FallbackImage
           src="/images/shop-hero.jpg"
           alt="Notos Life Boutique"
           fill
           priority
           className="object-cover opacity-70"
-          onError={(e) => {
-            const target = e.target;
-            target.src =
-              "https://placehold.co/1920x1080/000000/FFFFFF?text=Notos+Life+Shop";
-          }}
         />
         <div className="absolute inset-0 flex flex-col justify-center items-center bg-black/40">
           <motion.h1
@@ -110,16 +105,11 @@ export default function ShopPage() {
               className="bg-zinc-900 rounded-3xl overflow-hidden shadow-lg hover:shadow-[#d3960c]/30 transition-all"
             >
               <div className="relative w-full h-64">
-                <Image
+                <FallbackImage
                   src={product.image}
                   alt={product.name}
                   fill
                   className="object-cover"
-                  onError={(e) => {
-                    const target = e.target;
-                    target.src =
-                      "https://placehold.co/600x400/000000/FFFFFF?text=Notos+Product";
-                  }}
                 />
               </div>
 

@@ -92,7 +92,7 @@ export default function MenuPage() {
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
-        className="text-center text-5xl font-black uppercase tracking-tight mb-16"
+        className="text-center text-5xl md:text-6xl font-black uppercase tracking-tight mb-16"
       >
         Our <span className="text-[#d3960c]">Menu</span>
       </motion.h1>
@@ -106,7 +106,7 @@ export default function MenuPage() {
             onClick={() => setActiveCategory(category)}
             className={`px-6 py-2 rounded-full text-sm font-semibold uppercase tracking-wider transition ${
               activeCategory === category
-                ? "bg-[#d3960c] text-black"
+                ? "bg-[#d3960c] text-black shadow-lg shadow-[#d3960c]/30"
                 : "bg-zinc-900 text-gray-300 hover:bg-zinc-800"
             }`}
           >
@@ -121,7 +121,7 @@ export default function MenuPage() {
         className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10"
       >
         <AnimatePresence>
-          {filteredItems.map((item, index) => (
+          {filteredItems.map((item) => (
             <motion.div
               key={item.name}
               layout
@@ -139,7 +139,8 @@ export default function MenuPage() {
                   fill
                   className="object-cover"
                   onError={(e) => {
-                    const target = e.target;
+                    const target = e.target as HTMLImageElement;
+                    target.onerror = null; // Prevent infinite loop
                     target.src =
                       "https://placehold.co/600x400/000000/FFFFFF?text=Notos+Dish";
                   }}
@@ -147,7 +148,7 @@ export default function MenuPage() {
               </div>
               <div className="p-6">
                 <h3 className="text-2xl font-semibold mb-2">{item.name}</h3>
-                <p className="text-gray-400 text-sm mb-4">
+                <p className="text-gray-400 text-sm mb-4 leading-relaxed">
                   {item.description}
                 </p>
                 <p className="text-[#d3960c] font-bold text-lg">{item.price}</p>
@@ -170,7 +171,7 @@ export default function MenuPage() {
         </p>
         <a
           href="/contact"
-          className="inline-block bg-[#d3960c] hover:bg-[#a9780a] text-black font-bold px-10 py-4 rounded-full transition"
+          className="inline-block bg-[#d3960c] hover:bg-[#a9780a] text-black font-bold px-10 py-4 rounded-full transition shadow-lg shadow-[#d3960c]/30"
         >
           Reserve a Table
         </a>
