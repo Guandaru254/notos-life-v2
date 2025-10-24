@@ -17,13 +17,23 @@ export default function ContactPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 bg-black/60 flex flex-col items-center justify-center text-center">
-          <h1 className="text-6xl md:text-7xl font-black text-white tracking-tight">
+          <motion.h1
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8 }}
+            className="text-6xl md:text-7xl font-black text-white tracking-tight"
+          >
             Reserve Your <span className="text-[#d3960c]">Experience</span>
-          </h1>
-          <p className="text-gray-200 text-lg md:text-xl mt-6 max-w-2xl">
+          </motion.h1>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.3 }}
+            className="text-gray-200 text-lg md:text-xl mt-6 max-w-2xl"
+          >
             Let us host your unforgettable moments — from elegant dinners to
             private celebrations.
-          </p>
+          </motion.p>
         </div>
       </section>
 
@@ -44,14 +54,19 @@ export default function ContactPage() {
           <p>✉️ reservations@notoslife.com</p>
         </div>
 
-        <div className="mt-10">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.2 }}
+          className="mt-10"
+        >
           <Link
             href="/reservation"
             className="inline-block bg-[#d3960c] hover:bg-[#a9780a] text-black font-bold px-8 py-3 rounded-full transition"
           >
             Book a Table
           </Link>
-        </div>
+        </motion.div>
       </section>
 
       {/* MAP / LOCATION */}
@@ -59,8 +74,9 @@ export default function ContactPage() {
         <iframe
           className="absolute inset-0 w-full h-full"
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3988.8572572287135!2d36.81848631532574!3d-1.2833389990656207!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f10f9b7e16a3f%3A0x409b5d3a7b2f00d4!2sUAP%20Old%20Mutual%20Tower!5e0!3m2!1sen!2ske!4v1699999999999!5m2!1sen!2ske"
-          allowFullScreen=""
+          allowFullScreen    // ✅ FIXED
           loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
         ></iframe>
       </section>
     </main>

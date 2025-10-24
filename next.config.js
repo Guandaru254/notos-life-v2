@@ -5,6 +5,7 @@ const nextConfig = {
     appDir: true,
     esmExternals: true,
     serverComponentsExternalPackages: ['mongoose'],
+    
   },
   compiler: {
     styledComponents: true,
