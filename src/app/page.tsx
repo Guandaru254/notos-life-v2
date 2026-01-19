@@ -5,7 +5,7 @@ import Link from "next/link";
 import FallbackImage from "../components/FallbackImage";
 
 export default function HomePage() {
-  const heroImage = "/images/hero.jpg"; // ✅ from public/images folder
+  const heroImage = "/images/hero.jpg";
 
   return (
     <main className="bg-white text-gray-900">
@@ -13,7 +13,7 @@ export default function HomePage() {
       <section className="relative h-screen w-full overflow-hidden">
         <FallbackImage
           src={heroImage}
-          alt="Notos Life restaurant hero"
+          alt="Notos Life hospitality experiences"
           fill
           priority
           className="object-cover"
@@ -32,16 +32,16 @@ export default function HomePage() {
             </h1>
 
             <p className="text-gray-200 text-lg md:text-xl mb-8 max-w-2xl mx-auto">
-              Mediterranean elegance meets the vibrant energy of Nairobi. Discover
-              fine dining inspired by the Aegean and brought to life in Kenya.
+              A collection of curated dining, social, and culinary experiences —
+              inspired by the Mediterranean and brought to life in Nairobi.
             </p>
 
             <div className="flex justify-center gap-4">
               <Link
-                href="/menu"
+                href="/concepts"
                 className="inline-block bg-[#d3960c] hover:bg-[#a9780a] text-black font-bold px-8 py-3 rounded-full transition"
               >
-                Explore Menu
+                Explore Our Concepts
               </Link>
               <Link
                 href="/about"
@@ -54,7 +54,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* ================= CHEF’S PHILOSOPHY ================= */}
+      {/* ================= PHILOSOPHY ================= */}
       <section className="py-20 px-6 md:px-12 bg-gray-50 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -62,38 +62,40 @@ export default function HomePage() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight"
         >
-          The Art of <span className="text-[#d3960c]">Refined Simplicity</span>
+          A Philosophy of <span className="text-[#d3960c]">Refined Hospitality</span>
         </motion.h2>
 
         <p className="max-w-3xl mx-auto text-gray-700 text-lg leading-relaxed font-serif">
-          At Notos Life, we believe in honest cuisine — simple, seasonal, and
-          soulful. Every dish tells a story, from the sunlit shores of the
-          Mediterranean to the lively heartbeat of Nairobi.
+          Notos Life is built on the belief that great hospitality goes beyond food.
+          It is about atmosphere, intention, and connection. Across our concepts,
+          we craft spaces where cuisine, culture, and community come together.
         </p>
 
         <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8">
           <FallbackImage
             src="/images/chef.jpg"
-            alt="Chef preparing meal"
+            alt="Culinary craftsmanship at Notos Life"
             width={400}
             height={400}
             className="rounded-2xl shadow-xl object-cover"
           />
           <div className="max-w-md text-left">
-            <h3 className="text-2xl font-bold mb-3 text-gray-900">Chef’s Note</h3>
+            <h3 className="text-2xl font-bold mb-3 text-gray-900">
+              The Notos Approach
+            </h3>
             <p className="text-gray-600 font-serif leading-relaxed">
-              “Cooking is not just about flavor — it’s about emotion. Our goal is
-              to make you *feel* the passion of every plate, the warmth of every
-              ingredient, and the joy of every shared moment.”
+              “Every Notos experience is designed with care — from the ingredients
+              we source, to the people we serve, to the moments we create. Our goal
+              is simple: to leave a lasting impression.”
             </p>
             <p className="mt-4 font-semibold text-[#d3960c] italic">
-              — Executive Chef, Notos Life
+              — Notos Life
             </p>
           </div>
         </div>
       </section>
 
-      {/* ================= FEATURED MENU HIGHLIGHTS ================= */}
+      {/* ================= SIGNATURE EXPERIENCES ================= */}
       <section className="py-20 bg-white text-center border-t border-gray-100">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -101,25 +103,25 @@ export default function HomePage() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-extrabold mb-10 tracking-tight"
         >
-          Nairobi’s Favorite <span className="text-[#d3960c]">Main Courses</span>
+          Signature <span className="text-[#d3960c]">Notos Experiences</span>
         </motion.h2>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-10 max-w-6xl mx-auto px-6">
           {[
             {
-              name: "Grilled Red Snapper",
+              name: "Notos Greek",
               image: "/images/snapper.jpg",
-              desc: "Served with lemon butter and a hint of Swahili spice.",
+              desc: "Refined Mediterranean dining inspired by the Aegean, reimagined in Nairobi.",
             },
             {
-              name: "Lamb Tagine Royale",
+              name: "Notos Kitchen Bar",
               image: "/images/lamb.jpg",
-              desc: "Slow-cooked lamb with apricots, almonds, and saffron.",
+              desc: "A vibrant social dining experience where food, cocktails, and atmosphere collide.",
             },
             {
-              name: "Zanzibar Coconut Risotto",
+              name: "Notos Catering",
               image: "/images/risotto.jpg",
-              desc: "Creamy Arborio rice infused with coconut and lemongrass.",
+              desc: "High-volume, premium catering solutions trusted by leading corporate partners.",
             },
           ].map((item, idx) => (
             <motion.div
@@ -144,15 +146,15 @@ export default function HomePage() {
 
         <div className="mt-12">
           <Link
-            href="/menu"
+            href="/concepts"
             className="inline-block bg-[#d3960c] hover:bg-[#a9780a] text-black font-bold px-8 py-3 rounded-full transition"
           >
-            View Full Menu
+            View All Concepts
           </Link>
         </div>
       </section>
 
-      {/* ================= SHOP PREVIEW SECTION ================= */}
+      {/* ================= LIFESTYLE & CATERING ================= */}
       <section className="py-20 bg-gray-100 border-t border-gray-200 text-center">
         <motion.h2
           initial={{ opacity: 0, y: 30 }}
@@ -160,37 +162,20 @@ export default function HomePage() {
           transition={{ duration: 0.6 }}
           className="text-4xl md:text-5xl font-extrabold mb-10 tracking-tight"
         >
-          Explore the <span className="text-[#d3960c]">Notos Shop</span>
+          Beyond Dining: The <span className="text-[#d3960c]">Notos Lifestyle</span>
         </motion.h2>
 
         <p className="max-w-2xl mx-auto text-gray-600 mb-12 text-lg font-serif">
-          From fine olive oils to handmade ceramics — bring the Notos lifestyle
-          into your home.
+          From curated catering solutions to lifestyle offerings, Notos Life
+          extends its philosophy beyond the table — into homes, offices, and events.
         </p>
-
-        <div className="flex flex-col sm:flex-row justify-center gap-6">
-          <FallbackImage
-            src="https://placehold.co/300x300/F5F5F5/4B5563?text=Olive+Oil"
-            alt="Olive Oil"
-            width={300}
-            height={300}
-            className="rounded-xl shadow-lg object-cover"
-          />
-          <FallbackImage
-            src="https://placehold.co/300x300/F5F5F5/4B5563?text=Linen+Apron"
-            alt="Apron"
-            width={300}
-            height={300}
-            className="rounded-xl shadow-lg object-cover"
-          />
-        </div>
 
         <div className="mt-10">
           <Link
-            href="/shop"
+            href="/contact"
             className="inline-block bg-[#d3960c] hover:bg-[#a9780a] text-black font-bold px-8 py-3 rounded-full transition"
           >
-            Visit Our Shop
+            Work With Us
           </Link>
         </div>
       </section>
@@ -198,11 +183,11 @@ export default function HomePage() {
       {/* ================= CONTACT CTA ================= */}
       <section className="py-16 bg-gray-900 text-center text-white border-t border-gray-800">
         <h2 className="text-4xl font-extrabold mb-4">
-          Visit Us at{" "}
-          <span className="text-[#d3960c]">UAP Old Mutual Tower</span>
+          Connect With <span className="text-[#d3960c]">Notos Life</span>
         </h2>
         <p className="max-w-2xl mx-auto text-gray-300 mb-8 text-lg">
-          Experience exceptional dining in the heart of Nairobi’s skyline.
+          Whether you’re joining us for an experience, planning an event, or
+          exploring partnerships — we’d love to hear from you.
         </p>
         <Link
           href="/contact"
