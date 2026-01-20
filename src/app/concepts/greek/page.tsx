@@ -10,7 +10,7 @@ export default function NotosGreekPage() {
       {/* ================= HERO ================= */}
       <section className="relative h-[80vh] w-full overflow-hidden">
         <FallbackImage
-          src="/images/snapper.jpg"
+          src="/images/concepts/greek/greek6.jpeg"
           alt="Notos Greek Mediterranean dining"
           fill
           priority
@@ -80,17 +80,17 @@ export default function NotosGreekPage() {
             {[
               {
                 name: "Grilled Red Snapper",
-                image: "/images/snapper.jpg",
+                image: "/images/concepts/greek/greek6.jpeg",
                 desc: "Char-grilled whole snapper with lemon, olive oil, and herbs.",
               },
               {
                 name: "Lamb Tagine Royale",
-                image: "/images/lamb.jpg",
+                image: "/images/concepts/greek/greek6.jpeg",
                 desc: "Slow-cooked lamb with apricots, saffron, and warm spices.",
               },
               {
                 name: "Zanzibar Coconut Risotto",
-                image: "/images/risotto.jpg",
+                image: "/images/concepts/greek/greek6.jpeg",
                 desc: "Creamy risotto infused with coconut and subtle coastal notes.",
               },
             ].map((dish, idx) => (

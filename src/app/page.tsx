@@ -110,7 +110,7 @@ export default function HomePage() {
           {[
             {
               name: "Notos Greek",
-              image: "/images/snapper.jpg",
+              image: "/images/concepts/greek/greek6.jpeg",
               desc: "Refined Mediterranean dining inspired by the Aegean, reimagined in Nairobi.",
             },
             {
