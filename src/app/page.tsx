@@ -73,7 +73,7 @@ export default function HomePage() {
 
         <div className="mt-12 flex flex-col md:flex-row justify-center items-center gap-8">
           <FallbackImage
-            src="/images/chef.jpg"
+            src="/images/concepts/kitchen/bar18.jpeg"
             alt="Culinary craftsmanship at Notos Life"
             width={400}
             height={400}
@@ -110,12 +110,12 @@ export default function HomePage() {
           {[
             {
               name: "Notos Greek",
-              image: "/images/concepts/greek/greek6.jpeg",
+              image: "/images/concepts/greek/greek.jpeg",
               desc: "Refined Mediterranean dining inspired by the Aegean, reimagined in Nairobi.",
             },
             {
               name: "Notos Kitchen Bar",
-              image: "/images/lamb.jpg",
+              image: "/images/concepts/kitchen/bar29.jpeg",
               desc: "A vibrant social dining experience where food, cocktails, and atmosphere collide.",
             },
             {

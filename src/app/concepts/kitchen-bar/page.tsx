@@ -10,7 +10,7 @@ export default function NotosKitchenBarPage() {
       {/* ================= HERO ================= */}
       <section className="relative h-[85vh] w-full overflow-hidden">
         <FallbackImage
-          src="/images/lamb.jpg"
+          src="/images/concepts/kitchen/bar18.jpeg"
           alt="Notos Kitchen Bar social dining"
           fill
           priority
@@ -80,17 +80,17 @@ export default function NotosKitchenBarPage() {
             {[
               {
                 name: "Shared Plates",
-                image: "/images/snapper.jpg",
+                image: "/images/concepts/kitchen/bar.jpeg",
                 desc: "Designed for the table — bold, social, and indulgent.",
               },
               {
                 name: "Signature Mains",
-                image: "/images/lamb.jpg",
+                image: "/images/concepts/kitchen/bar.jpeg",
                 desc: "Comfort classics elevated with global inspiration.",
               },
               {
                 name: "Craft Cocktails",
-                image: "/images/risotto.jpg",
+                image: "/images/concepts/kitchen/bar27.jpeg",
                 desc: "Inventive cocktails balanced for long nights.",
               },
             ].map((item, idx) => (

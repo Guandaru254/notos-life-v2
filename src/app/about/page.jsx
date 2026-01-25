@@ -9,7 +9,7 @@ export default function AboutPage() {
       {/* HERO */}
       <section className="relative h-[90vh] w-full overflow-hidden">
         <Image
-          src="/images/about-hero.jpg"
+          src="/images/concepts/kitchen/bar29.jpeg"
           alt="About Notos Life"
           fill
           priority
@@ -51,7 +51,7 @@ export default function AboutPage() {
       {/* OUR PHILOSOPHY */}
       <section className="py-20 px-6 md:px-12 bg-white flex flex-col md:flex-row items-center gap-10">
         <Image
-          src="/images/philosophy.jpg"
+          src="/images/concepts/kitchen/bar20.jpeg"
           alt="Our Philosophy"
           width={500}
           height={400}
@@ -85,13 +85,13 @@ export default function AboutPage() {
         <div className="flex flex-wrap justify-center gap-10">
           {[
             {
-              name: "Chef Elena Marakis",
-              role: "Executive Chef",
+              name: "...",
+              role: "",
               img: "/images/chef-elena.jpg",
             },
             {
-              name: "Samuel Karanja",
-              role: "Restaurant Director",
+              name: "...",
+              role: "",
               img: "/images/director.jpg",
             },
           ].map((member, idx) => (
