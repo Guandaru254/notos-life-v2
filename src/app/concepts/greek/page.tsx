@@ -79,19 +79,19 @@ export default function NotosGreekPage() {
           <div className="grid md:grid-cols-3 gap-10">
             {[
               {
-                name: "Grilled Red Snapper",
+                name: "",
                 image: "/images/concepts/greek/greek6.jpeg",
-                desc: "Char-grilled whole snapper with lemon, olive oil, and herbs.",
+                desc: "",
               },
               {
-                name: "Lamb Tagine Royale",
-                image: "/images/concepts/greek/greek6.jpeg",
-                desc: "Slow-cooked lamb with apricots, saffron, and warm spices.",
+                name: "",
+                image: "/images/concepts/greek/greek2.jpeg",
+                desc: "",
               },
               {
-                name: "Zanzibar Coconut Risotto",
-                image: "/images/concepts/greek/greek6.jpeg",
-                desc: "Creamy risotto infused with coconut and subtle coastal notes.",
+                name: "",
+                image: "/images/concepts/greek/greek3.jpeg",
+                desc: "",
               },
             ].map((dish, idx) => (
               <motion.div
@@ -118,7 +118,7 @@ export default function NotosGreekPage() {
 
           <div className="text-center mt-14">
             <Link
-              href="/menu"
+              href=""
               className="inline-block bg-[#d3960c] hover:bg-[#a9780a] text-black font-bold px-10 py-3 rounded-full transition"
             >
               View Full Menu
